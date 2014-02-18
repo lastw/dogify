@@ -1,19 +1,27 @@
 var terms = 'wow so very such many much'.split(' ');
 
-terms.forEach(function (term) {
-  [Object, Array, Number, String].forEach(function (target) {
+function dogifyGetter(term, targets, getter) {
+  targets.forEach(function (target) {
     Object.defineProperty(target.prototype, term, {
-      get: function () {
-        /*
-         * You can uncomment the line below
-         * to use dogify in chrome console without calling dogify().
-         */
-
-        //return this.constructor.name === 'CommandLineAPI' ? window : this;
-        return this;
-      }
+      get: getter
     });
   });
+}
+
+terms.forEach(function (term) {
+  dogifyGetter(term, [Object, Array], function () {
+    /*
+     * You can uncomment the line below
+     * to use dogify in chrome console without calling dogify().
+     */
+
+    //return this.constructor.name === 'CommandLineAPI' ? window : this;
+    return this;
+  });
+  dogifyGetter(term, [String, Number], function () {
+    return this.valueOf();
+  });
+
 });
 
 function dogify() {
