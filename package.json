@@ -1,0 +1,9 @@
+{
+  "name": "dogify",
+  "version": "0.0.1",
+  "authors": [
+    "Vladislav Sapozhnikov <me@lastw.net>"
+  ],
+  "description": "very useful",
+  "license": "MIT"
+}
