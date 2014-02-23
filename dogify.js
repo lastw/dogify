@@ -9,29 +9,25 @@ function dogifyGetter(term, targets, getter) {
 }
 
 terms.forEach(function (term) {
-  dogifyGetter(term, [Object, Array], function () {
+  dogifyGetter(term, [Object], function () {
     /*
-     * You can uncomment the line below
-     * to use dogify in chrome console without calling dogify().
+     * You can uncomment the line below to use dogify in chrome 33- console,
+     * but feel the difference: http://jsperf.com/dogify
      */
 
     //return this.constructor.name === 'CommandLineAPI' ? window : this;
     return this;
   });
-  dogifyGetter(term, [String, Number], function () {
+  dogifyGetter(term, [String, Number, Boolean], function () {
     return this.valueOf();
   });
 
 });
 
+/*
+ * call dogify(), if it doesn't work in chrome console
+ */
 function dogify() {
-  terms.forEach(function (term) {
-    Object.defineProperty(console._commandLineAPI.constructor.prototype, term, {
-      get: function () {
-        return window;
-      }
-    });
-  });
   var rgb = [0, 0, 0].map(function () {
     var val = Math.floor(Math.random() * 256);
     return {
@@ -46,4 +42,12 @@ function dogify() {
       '); background: rgb(' +
       [rgb[0].b, rgb[1].b, rgb[2].b].join(',') + ')'
   );
+
+  terms.forEach(function (term) {
+    Object.defineProperty(console._commandLineAPI.constructor.prototype, term, {
+      get: function () {
+        return window;
+      }
+    });
+  });
 }

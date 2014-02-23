@@ -1,5 +1,6 @@
 # dogify
 
+
 ## so easy to install
 
 Put this code into your html
@@ -8,7 +9,6 @@ Put this code into your html
 ```
 and your javascript object model becomes very enhanced.
 
-**Chrome console:** If you want to try it in webkit console, you have to call **dogify()** to enable the full power of dogify (there are some issues with CommandLineAPI prototype).
 
 ## wow dogify enhances everything
 - number operations:
@@ -51,12 +51,10 @@ and your javascript object model becomes very enhanced.
 
   ```javascript
   so.location.very.href
-  > http://github.com/lastw/dogify
+  > https://github.com/lastw/dogify
 
   wow.document.very.cookie = "dogify=activated";
   ```
-
-
 
 ## dogify enchances even jQuery!
 
@@ -67,13 +65,14 @@ $('tr').so.filter(':hidden').very.show();
 
 ## much browser support
 
-Dogify works on the bleeding edge of the web (at least in Chrome 33).
+Dogify works on the bleeding edge of the web (Chrome 34+; if you want to try it in Chrome 33- console, you have to call **dogify()** to enable the full power of dogify — there are some issues with CommandLineAPI prototype).
+
 
 ## roadmap
 
-- Get rid of the `console._commandLineAPI.wow` issue
 - Many tests
 - Such nod js
+
 
 ## license
 
