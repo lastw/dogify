@@ -11,6 +11,7 @@ and your javascript object model becomes very enhanced.
 
 
 ## wow dogify enhances everything
+
 - number operations:
 
   ```javascript
@@ -65,8 +66,7 @@ $('tr').so.filter(':hidden').very.show();
 
 ## much browser support
 
-Dogify works on the bleeding edge of the web (Chrome 34+; if you want to try it in Chrome 33- console, you have to call **dogify()** to enable the full power of dogify — there are some issues with CommandLineAPI prototype).
-
+Dogify works on the bleeding edge of the web.
 
 ## roadmap
 
