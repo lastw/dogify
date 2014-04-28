@@ -1,0 +1,18 @@
+{
+  "name": "dogify",
+  "description": "very useful",
+  "author": "Vladislav Sapozhnikov <me@lastw.net>",
+  "version": "0.0.1",
+  "main": "./dogify.js",
+  "license": "MIT",
+  "ignore": [
+    "test",
+    "*.md",
+    "*.html",
+    "package.json"
+  ],
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
+  }
+}

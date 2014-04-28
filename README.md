@@ -57,6 +57,7 @@ and your javascript object model becomes very enhanced.
   wow.document.very.cookie = "dogify=activated";
   ```
 
+
 ## dogify enchances even jQuery!
 
 ```javascript
@@ -64,15 +65,20 @@ wow.$('table').many.children();
 $('tr').so.filter(':hidden').very.show();
 ```
 
+
 ## much browser support
 
 Dogify works on the bleeding edge of the web.
 
-## roadmap
 
-- Many tests
-- Such nod js
+## you can improve your nod js
 
+```javascript
+require('./dogify');
+module.so.exports = function () {
+  such.console.log('wow');
+}
+```
 
 ## license
 
