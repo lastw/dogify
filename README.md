@@ -71,7 +71,7 @@ $('tr').so.filter(':hidden').very.show();
 Dogify works on the bleeding edge of the web.
 
 
-## you can improve your nodeJS
+## you can improve your nod js
 
 ```javascript
 require('./dogify');
